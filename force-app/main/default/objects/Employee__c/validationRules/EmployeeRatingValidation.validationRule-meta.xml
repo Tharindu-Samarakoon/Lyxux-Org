@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EmployeeRatingValidation</fullName>
+    <active>true</active>
+    <description>Validation rule to ensure that rating remains in the range of 1 - 10</description>
+    <errorConditionFormula>OR(
+Rating__c &gt; 10,
+Rating__c  &lt; 1 
+)</errorConditionFormula>
+    <errorDisplayField>Rating__c</errorDisplayField>
+    <errorMessage>Please enter a value between 1 and 10.</errorMessage>
+</ValidationRule>
